@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ninawiedrich/UrbanEventure.git/static/css/main.073c9b0a.css",
+    "main.js": "/ninawiedrich/UrbanEventure.git/static/js/main.fd8278b6.js",
+    "static/js/787.0c2ca0b5.chunk.js": "/ninawiedrich/UrbanEventure.git/static/js/787.0c2ca0b5.chunk.js",
+    "service-worker.js": "/ninawiedrich/UrbanEventure.git/service-worker.js",
+    "static/media/logo.svg": "/ninawiedrich/UrbanEventure.git/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "index.html": "/ninawiedrich/UrbanEventure.git/index.html",
+    "main.073c9b0a.css.map": "/ninawiedrich/UrbanEventure.git/static/css/main.073c9b0a.css.map",
+    "main.fd8278b6.js.map": "/ninawiedrich/UrbanEventure.git/static/js/main.fd8278b6.js.map",
+    "787.0c2ca0b5.chunk.js.map": "/ninawiedrich/UrbanEventure.git/static/js/787.0c2ca0b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.fd8278b6.js"
+  ]
+}
