@@ -1,145 +1,86 @@
 # UrbanEventure: A Meet App
 
-
 ## Objective
-
-Build a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application integrates with the Google Calendar API to fetch upcoming events.
+Create a serverless, progressive web application (PWA) in React following the test-driven development (TDD) approach, integrating with Google Calendar API to fetch and showcase upcoming events.
 
 ### Context
+Merging serverless computing and PWAs paves the way for modern web development, with perks like:
 
-Combining serverless architectures with PWAs is the future of web development, offering:
+- **Serverless Advantages**: 
+    - Backend-free upkeep
+    - Elastic scalability
+    - Optimal availability
+    - Economical
+    
+- **PWA Advantages**: 
+    - Immediate load times
+    - Offline accessibility
+    - Push alerts
+    - Fluid design
+    - Universal platform support
 
-- **Serverless Benefits**: 
-    - No backend maintenance 
-    - Scalability
-    - High availability
-    - Cost-effective
-- **PWAs Benefits**: 
-    - Instant loading
-    - Offline support
-    - Push notifications
-    - Responsive design
-    - Cross-platform compatibility
-
-The app will display events based on city searches. Data visualization will be used to show event counts by location and event genre popularity.
-
+The Meet app is designed to curate events based on city inputs, with data visualization illuminating event distribution by location and popularity of event genres.
 
 ## The 5 Ws
-
-1. **Who**: Users of the Meet app - you, friends, professional network, or potential employers.
-2. **What**: A PWA with a serverless backend developed using TDD.
-3. **When**: Anytime users wish to view upcoming events for a specific city.
-4. **Where**: Hosted serverlessly on a cloud provider with the application available online and offline.
-5. **Why**: Embracing next-gen cloud infrastructure and providing a stellar user experience through PWAs, with quality assurance from TDD.
-
+1. **Who**: Targeted at Meet app users – including peers, professionals, potential recruiters.
+2. **What**: A PWA employing serverless architecture and sculpted through TDD.
+3. **When**: Usable whenever users aspire to explore upcoming events in a chosen city.
+4. **Where**: Seamless cloud hosting ensures both online and offline accessibility.
+5. **Why**: To harness the power of contemporary cloud solutions, presenting unparalleled user experience via PWAs, and ensuring impeccable quality via TDD.
 
 ## User Stories, Scenarios, and Acceptance Criteria
 
 ### Key Features
 
 - Filter Events by City
-- Show/Hide Event Details
-- Specify Number of Events
-- Offline Usage Capability
-- Add App Shortcut to Home Screen
-- Display Charts Visualizing Event Data
+- Toggle Event Information
+- Dictate Event Quantity
+- Offline Functionality
+- App Shortcut Addition to Home
+- Visual Charts of Event Statistics
 
-### Feature: Filter Events By City
+### Feature Narratives
 
-  **Background:**  
-    Given I am on the events page
+- **Filter Events By City**: 
+    - Default to events from all cities.
+    - Autocomplete city suggestions during search.
+    - Filter events upon selecting a city.
 
-  **Scenario:** Display events from all cities when no city is searched  
-    When I haven't searched for a city  
-    Then I should see upcoming events from all cities  
+- **Show/Hide Event Details**: 
+    - Default view collapses event details.
+    - "Show Details" button expands event specifics.
+    - "Hide Details" button collapses them back.
 
-  **Scenario:** View city suggestions while searching  
-    Given I start typing a city name in the search bar  
-    Then I should see a list of suggested cities based on my input  
+- **Specify Number of Events**: 
+    - Defaults to 32 events.
+    - Input allows user-specific event count display.
 
-  **Scenario:** Select a city from the suggested list  
-    Given I see a list of suggested cities  
-    When I click on a city from the suggestions  
-    Then the events should be filtered to show only those from the selected city  
+- **Offline Usability**: 
+    - View previously cached events during offline mode.
+    - Error message for offline search setting modifications.
 
-### Feature: Show/Hide Event Details
+- **App Shortcut on Home Screen**: 
+    - Option to add app shortcut on the device's home.
 
-  **Background:**  
-    Given I am viewing the list of events  
+- **Event Data Visualization**: 
+    - Charts showing events per city distribution.
 
-  **Scenario:** Event element is collapsed by default  
-    Then I should see the event details are hidden  
+### Technical Mandates
 
-  **Scenario:** Expand an event to see its details  
-    When I click on the "Show Details" button of an event  
-    Then I should see the detailed information about the event  
-
-  **Scenario:** Collapse an event to hide its details  
-    When I click on the "Hide Details" button of an event  
-    Then I should see the event details are hidden  
-
-### Feature: Specify Number of Events
-
-  **Background:**  
-    Given I am on the events page  
-
-  **Scenario:** Display 32 events by default  
-    When I haven't specified the number of events to display  
-    Then I should see 32 events listed  
-
-  **Scenario:** Change the number of events displayed  
-    Given I want to view a specific number of events  
-    When I input the desired number in the "Number of Events" field  
-    Then the list should update to display the specified number of events  
-
-### Feature: Use the App When Offline
-
-  **Scenario:** View cached events when offline  
-    Given I am offline  
-    When I visit the events page  
-    Then I should see the events that were last cached  
-
-  **Scenario:** Show error for search setting changes when offline  
-    Given I am offline  
-    When I change the search settings  
-    Then I should see an error message  
-
-### Feature: Add an App Shortcut to the Home Screen
-
-  **Scenario:** Add app shortcut to home screen  
-    Given I am on the homepage of the app  
-    When I choose to add the app to the home screen  
-    Then a shortcut of the app should be added to my device's home screen  
-
-### Feature: Display Charts Visualizing Event Details
-
-  **Scenario:** Display a chart of events by city  
-    Given I am on the events page  
-    When I look at the events visualization section  
-    Then I should see a chart showing the number of upcoming events in each city  
-
-
-### Technical Requirements
-
-- Built using React
-- Follows TDD principles
-- Google Calendar API & OAuth2 authentication
-- Serverless functions (pref. AWS Lambda)
-- Hosted on GitHub
-- Compatibility with major browsers including IE11
-- Responsive design (1920px to 320px widths)
-- Passes Lighthouse’s PWA checklist
-- Offline support using service workers
-- Deployed on GitHub Pages
-- Uses OOP for alerts
-- Data visualization features
-- Test coverage >= 90%
-- Monitored using online performance tools
-
+- Framed in React
+- Strict adherence to TDD
+- Google Calendar API with OAuth2
+- Serverless function calls (preferably AWS Lambda)
+- GitHub hosting
+- Full compatibility, inclusive of IE11
+- Adaptive design (ranging from 1920px to 320px)
+- Achieves PWA standards as per Lighthouse
+- Service workers ensure offline functionality
+- Deployment via GitHub Pages
+- Object-Oriented Programming (OOP) for alerts
+- Data visualization tools integrated
+- Aiming for ≥ 90% test coverage
+- Performance monitoring via online tools
 
 ## Advanced Deliverables
-
-[Placeholder for additional features]
-
-
-
+[Additional feature placeholders here]
