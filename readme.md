@@ -39,31 +39,80 @@ The Meet app is designed to curate events based on city inputs, with data visual
 - App Shortcut Addition to Home
 - Visual Charts of Event Statistics
 
-### Feature Narratives
+### Feature: Filter Events By City
 
-- **Filter Events By City**: 
-    - Default to events from all cities.
-    - Autocomplete city suggestions during search.
-    - Filter events upon selecting a city.
+  **Background:**  
+    Given I am on the events page
 
-- **Show/Hide Event Details**: 
-    - Default view collapses event details.
-    - "Show Details" button expands event specifics.
-    - "Hide Details" button collapses them back.
+  **Scenario:** Display events from all cities when no city is searched  
+    When I haven't searched for a city  
+    Then I should see upcoming events from all cities  
 
-- **Specify Number of Events**: 
-    - Defaults to 32 events.
-    - Input allows user-specific event count display.
+  **Scenario:** View city suggestions while searching  
+    Given I start typing a city name in the search bar  
+    Then I should see a list of suggested cities based on my input  
 
-- **Offline Usability**: 
-    - View previously cached events during offline mode.
-    - Error message for offline search setting modifications.
+  **Scenario:** Select a city from the suggested list  
+    Given I see a list of suggested cities  
+    When I click on a city from the suggestions  
+    Then the events should be filtered to show only those from the selected city  
 
-- **App Shortcut on Home Screen**: 
-    - Option to add app shortcut on the device's home.
+### Feature: Show/Hide Event Details
 
-- **Event Data Visualization**: 
-    - Charts showing events per city distribution.
+  **Background:**  
+    Given I am viewing the list of events  
+
+  **Scenario:** Event element is collapsed by default  
+    Then I should see the event details are hidden  
+
+  **Scenario:** Expand an event to see its details  
+    When I click on the "Show Details" button of an event  
+    Then I should see the detailed information about the event  
+
+  **Scenario:** Collapse an event to hide its details  
+    When I click on the "Hide Details" button of an event  
+    Then I should see the event details are hidden  
+
+### Feature: Specify Number of Events
+
+  **Background:**  
+    Given I am on the events page  
+
+  **Scenario:** Display 32 events by default  
+    When I haven't specified the number of events to display  
+    Then I should see 32 events listed  
+
+  **Scenario:** Change the number of events displayed  
+    Given I want to view a specific number of events  
+    When I input the desired number in the "Number of Events" field  
+    Then the list should update to display the specified number of events  
+
+### Feature: Use the App When Offline
+
+  **Scenario:** View cached events when offline  
+    Given I am offline  
+    When I visit the events page  
+    Then I should see the events that were last cached  
+
+  **Scenario:** Show error for search setting changes when offline  
+    Given I am offline  
+    When I change the search settings  
+    Then I should see an error message  
+
+### Feature: Add an App Shortcut to the Home Screen
+
+  **Scenario:** Add app shortcut to home screen  
+    Given I am on the homepage of the app  
+    When I choose to add the app to the home screen  
+    Then a shortcut of the app should be added to my device's home screen  
+
+### Feature: Display Charts Visualizing Event Details
+
+  **Scenario:** Display a chart of events by city  
+    Given I am on the events page  
+    When I look at the events visualization section  
+    Then I should see a chart showing the number of upcoming events in each city  
+
 
 ### Technical Mandates
 
