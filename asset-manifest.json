@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/UrbanEventure/static/css/main.073c9b0a.css",
-    "main.js": "/UrbanEventure/static/js/main.08683506.js",
+    "main.css": "/UrbanEventure/static/css/main.7a2616b4.css",
+    "main.js": "/UrbanEventure/static/js/main.c56224ab.js",
     "static/js/787.0c2ca0b5.chunk.js": "/UrbanEventure/static/js/787.0c2ca0b5.chunk.js",
     "service-worker.js": "/UrbanEventure/service-worker.js",
+    "static/media/logo-UrbanEventure.png": "/UrbanEventure/static/media/logo-UrbanEventure.3fbf708ad5d65b357cf3.png",
+    "static/media/logo-men.png": "/UrbanEventure/static/media/logo-men.90ffb56a91c6ab614ec9.png",
     "index.html": "/UrbanEventure/index.html",
-    "main.073c9b0a.css.map": "/UrbanEventure/static/css/main.073c9b0a.css.map",
-    "main.08683506.js.map": "/UrbanEventure/static/js/main.08683506.js.map",
+    "main.7a2616b4.css.map": "/UrbanEventure/static/css/main.7a2616b4.css.map",
+    "main.c56224ab.js.map": "/UrbanEventure/static/js/main.c56224ab.js.map",
     "787.0c2ca0b5.chunk.js.map": "/UrbanEventure/static/js/787.0c2ca0b5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.08683506.js"
+    "static/css/main.7a2616b4.css",
+    "static/js/main.c56224ab.js"
   ]
 }
