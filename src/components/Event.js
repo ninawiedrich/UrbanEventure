@@ -8,20 +8,21 @@ const Event = ({ event }) => {
   };
 
   return (
-    <li>
+    <li className="event-item">
       <h2>{event.summary}</h2>
       <p>{new Date(event.created).toLocaleString()}</p>
       <p>{event.location}</p>
-      <button className="show-details-button" onClick={toggleDetails}>
-    {detailsVisible ? 'Hide Details' : 'Show Details'}
-</button>
-{detailsVisible && 
-    <div className="event-details">
-        <p>Details of the event...</p>
-    </div>
+      <button className="details-btn" onClick={toggleDetails}>
+        {detailsVisible ? 'Hide Details' : 'Show Details'}
+      </button>
+      {detailsVisible && 
+        <div className="event-details">
+          <p>Details of the event...</p>
+        </div>
       }
     </li>
   );
 }
 
 export default Event;
+

@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,185 @@
   to {
     transform: rotate(360deg);
   }
+} */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f3f5;
+  margin: 0;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.App-header {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #eacd65;
+  border: 3px solid red
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.men {
+  height: 130px; /* Adjust as needed */
+  width: auto; /* Adjust as needed */
+  padding: 10px;
+  margin-right: 300px;
+}
+.men-m{
+  height: 100px; /* Adjust as needed */
+  width: auto; /* Adjust as needed */
+  padding: 10px;
+  margin-top: 35px;
+  margin-right: 235px;
+}
+
+.logo img {
+  width: 350px;
+}
+
+#city-search{
+  width: 300px;
+  margin-right: 20px;  
+  margin-top: 25px;
+}
+
+
+.city-input {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #eaad65; 
+  border-radius: 5px;
+  width: calc(50% - 22px); 
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(234, 173, 101, 0.5); 
+}
+
+.event-number-input {
+  padding: 10px;
+  border: 1px solid #eaad65; /* Logo color */
+  border-radius: 5px;
+  width: calc(50% - 22px); /* Adjusting for padding and border */
+  box-sizing: border-box;
+  box-shadow: 0 0 5px rgba(234, 173, 101, 0.5); /* Logo color shadow */
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around; /* Evenly distribute space around the cards */
+  list-style-type: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.event-item {
+  flex: 1 1 calc(30% - 20px); /* Adjusted to maintain a consistent size */
+  max-width: calc(30% - 20px); /* Adjusted to match the flex basis */
+  min-width: 300px; /* Set a minimum width to maintain a decent width even when there's only one item */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* This will contain the button within the event item */
+}
+
+@media (max-width: 768px) {
+  .event-item {
+    flex: 1 1 calc(45% - 20px); /* Adjusted to take up a bit more space on smaller screens */
+    max-width: calc(45% - 20px); /* Adjusted to match the flex basis */
+  }
+}
+
+@media (max-width: 480px) {
+  .event-item {
+    flex: 1 1 100%; /* Adjusted to take up the full width on very small screens */
+    max-width: 100%; /* Adjusted to match the flex basis */
+  }
+}
+
+.event-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.event-date, .event-location {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.suggestions {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  z-index: 1000;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.city-input, .event-number-input {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.event-number-input {
+  width: calc(100% - 20px);
+}
+
+
+.details-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  background-color: #ff4242; /* Matching with your logo color */
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.details-btn:hover {
+  background-color: #e61d1d;
+}
+
+
+
+

@@ -13,7 +13,7 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
   };
 
   return (
-    <div id="numberOfEvents">
+    <div id="numberOfEvents" className="number-of-events">
       <label htmlFor="eventNumberInput">Number of Events:</label>
       <input 
         id="eventNumberInput"
@@ -21,10 +21,10 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
         value={numberOfEvents}
         onChange={handleInputChanged}
         data-testid="numberOfEventsInput"
+        className="event-number-input"
       />
     </div>
   );
 };
 
 export default NumberOfEvents;
-
