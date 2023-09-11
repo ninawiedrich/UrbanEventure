@@ -16,9 +16,11 @@ const Event = ({ event }) => {
         {detailsVisible ? 'Hide Details' : 'Show Details'}
       </button>
       {detailsVisible && 
-        <div className="event-details">
-          <p>Details of the event...</p>
-        </div>
+       <div className="event-details">
+       <h3 className="event-about">About Event:</h3>
+       <a className="event-link" href={event.htmlLink}>See details on Google Calendar</a>
+       <p className="event-description">{event.description}</p>
+     </div>
       }
     </li>
   );

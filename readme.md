@@ -41,51 +41,51 @@ The Meet app is designed to curate events based on city inputs, with data visual
 
 ### Feature: Filter Events By City
 
-  **Background:**  
-    Given I am on the events page
+**Scenario:** When user hasn't searched for a city, show upcoming events from all cities.
+  Given user hasn't searched for any city
+  When the user opens the app
+  Then the user should see the list of all upcoming events.
 
-  **Scenario:** Display events from all cities when no city is searched  
-    When I haven't searched for a city  
-    Then I should see upcoming events from all cities  
+**Scenario:** User should see a list of suggestions when they search for a city.
+  Given the main page is open
+  When user starts typing in the city textbox
+  Then the user should receive a list of cities (suggestions) that match what they’ve typed
 
-  **Scenario:** View city suggestions while searching  
-    Given I start typing a city name in the search bar  
-    Then I should see a list of suggested cities based on my input  
-
-  **Scenario:** Select a city from the suggested list  
-    Given I see a list of suggested cities  
-    When I click on a city from the suggestions  
-    Then the events should be filtered to show only those from the selected city  
-
+**Scenario:** User can select a city from the suggested list.
+  Given user was typing “Berlin” in the city textbox
+  And the list of suggested cities is showing
+  When the user selects a city (e.g., “Berlin, Germany”) from the list
+  Then their city should be changed to that city (i.e., “Berlin, Germany”)
+  And the user should receive a list of upcoming events in that city
+ 
 ### Feature: Show/Hide Event Details
 
-  **Background:**  
-    Given I am viewing the list of events  
+  **Scenario:** Initially, the event details are hidden.
+Given the user is viewing the list of events
+When no action is taken on an event
+Then the event details should be hidden by default 
 
-  **Scenario:** Event element is collapsed by default  
-    Then I should see the event details are hidden  
+  **Scenario:** User can expand an event to view its details.
+Given the user is viewing the list of events
+When the user clicks on the "Show Details" button of an event
+Then the detailed information about the event should be displayed 
 
-  **Scenario:** Expand an event to see its details  
-    When I click on the "Show Details" button of an event  
-    Then I should see the detailed information about the event  
-
-  **Scenario:** Collapse an event to hide its details  
-    When I click on the "Hide Details" button of an event  
-    Then I should see the event details are hidden  
+  **Scenario:** User can collapse an event to hide its details.
+Given the user has expanded an event to view its details
+When the user clicks on the "Hide Details" button of the event
+Then the event details should be hidden again
 
 ### Feature: Specify Number of Events
 
-  **Background:**  
-    Given I am on the events page  
+  **Scenario:** When a user hasn't set a number of events to display, show all events  
+   Given user hasn't filtered events by a city
+    When the user is on the home page of events
+    Then a total number of events should be shown 
 
-  **Scenario:** Display 32 events by default  
-    When I haven't specified the number of events to display  
-    Then I should see 32 events listed  
-
-  **Scenario:** Change the number of events displayed  
-    Given I want to view a specific number of events  
-    When I input the desired number in the "Number of Events" field  
-    Then the list should update to display the specified number of events  
+  **Scenario:** When a user has set number of events to display  
+   Given the user is on the home page of events
+    When the user sets a number in the number of events text box
+    Then the user should see a that number of events in the list
 
 ### Feature: Use the App When Offline
 

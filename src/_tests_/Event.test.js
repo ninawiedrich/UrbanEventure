@@ -28,18 +28,18 @@ describe('<Event /> component', () => {
   });
 
   test('renders "show details" button', () => {
-    const showDetailsButton = EventComponent.container.querySelector('.show-details-button'); // Assuming you have a class called "show-details-button" on the button
+    const showDetailsButton = EventComponent.container.querySelector('.details-btn');
     expect(showDetailsButton).toBeInTheDocument();
   });
 
   test('event details are hidden by default', () => {
-    const eventDetails = EventComponent.container.querySelector('.event-details'); // Assuming you have a class called "event-details" for the details
+    const eventDetails = EventComponent.container.querySelector('.event-details');
     expect(eventDetails).not.toBeInTheDocument();
   });
   
   test('event details are shown when "show details" button is clicked', async () => {
     const user = userEvent.setup();
-    const showDetailsButton = EventComponent.container.querySelector('.show-details-button');
+    const showDetailsButton = EventComponent.container.querySelector('.details-btn');
     await user.click(showDetailsButton);
   
     const eventDetails = EventComponent.container.querySelector('.event-details');
@@ -48,11 +48,11 @@ describe('<Event /> component', () => {
   
   test('event details are hidden when "hide details" button is clicked', async () => {
     const user = userEvent.setup();
-    const showDetailsButton = EventComponent.container.querySelector('.show-details-button');
-    await user.click(showDetailsButton);  // First click to show details
+    const showDetailsButton = EventComponent.container.querySelector('.details-btn');
+    await user.click(showDetailsButton);
   
     const hideDetailsButton = EventComponent.container.querySelector('.hide-details-button');
-    await user.click(hideDetailsButton);  // Second click to hide details
+    await user.click(hideDetailsButton);
   
     const eventDetails = EventComponent.container.querySelector('.event-details');
     expect(eventDetails).not.toBeInTheDocument();
