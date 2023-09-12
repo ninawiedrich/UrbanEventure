@@ -10,7 +10,7 @@ const Event = ({ event }) => {
   return (
     <li className="event-item">
       <h2>{event.summary}</h2>
-      <p>{new Date(event.created).toLocaleString()}</p>
+      <p>{new Date(event.start.dateTime).toLocaleString()}</p>
       <p>{event.location}</p>
       <button className="details-btn" onClick={toggleDetails}>
         {detailsVisible ? 'Hide Details' : 'Show Details'}
