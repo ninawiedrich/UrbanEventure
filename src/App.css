@@ -214,6 +214,14 @@ body {
   background-color: #e61d1d;
 }
 
+.alerts-container {
+  position: absolute;
+  top: 255px;
+  left: 350px;
+  width: 250px;
+  z-index: 1000;
+}
+
 
 
 

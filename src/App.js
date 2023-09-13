@@ -5,6 +5,8 @@ import NumberOfEvents from './components/NumberOfEvents';
 import { extractLocations, getEvents } from './api';
 import logo from './img/logo-UrbanEventure.png';
 import men from './img/logo-men.png';
+import { InfoAlert } from './components/Alert';
+import { ErrorAlert } from './components/Alert';
 import './App.css';
 
 const App = () => {
@@ -12,7 +14,8 @@ const App = () => {
   const [currentNOE, setCurrentNOE] = useState(32);
   const [events, setEvents] = useState([]);
   const [currentCity, setCurrentCity] = useState("See all cities");
-
+  const [infoAlert, setInfoAlert] = useState("")
+const [errorAlert, setErrorAlert] = useState("")
   useEffect(() => {
     fetchData();
   }, [currentCity, currentNOE]);
@@ -37,8 +40,12 @@ const App = () => {
     <img src={logo} alt="UrbanEventure logo" />
   </div>
 </header>
-      <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity}/>
-      <NumberOfEvents setCurrentNOE={setCurrentNOE}/>
+<div className="alerts-container">
+        {infoAlert.length ? <InfoAlert text={infoAlert}/> : null}
+        {errorAlert.length ? <ErrorAlert text={errorAlert}/> : null}
+      </div>
+      <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} setInfoAlert={setInfoAlert}/>
+      <NumberOfEvents setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert}/>
       <EventList events={events} />
     </div>
   );
