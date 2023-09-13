@@ -72,14 +72,14 @@ body {
 }
 
 .men {
-  height: 130px; /* Adjust as needed */
-  width: auto; /* Adjust as needed */
+  height: auto; 
+  width: 130px; 
   padding: 10px;
   margin-right: 300px;
 }
 .men-m{
-  height: 100px; /* Adjust as needed */
-  width: auto; /* Adjust as needed */
+  height: auto;
+  width: 100px; 
   padding: 10px;
   margin-top: 35px;
   margin-right: 235px;
@@ -215,9 +215,9 @@ body {
 }
 
 .alerts-container {
-  position: absolute;
-  top: 255px;
-  left: 350px;
+  position: fixed;
+  top: 41%;
+  left: 22%;
   width: 250px;
   z-index: 1000;
 }
