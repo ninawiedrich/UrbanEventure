@@ -18,7 +18,6 @@ const Event = ({ event }) => {
       {detailsVisible && 
        <div className="event-details">
        <h3 className="event-about">About Event:</h3>
-       <a className="event-link" href={event.htmlLink}>See details on Google Calendar</a>
        <p className="event-description">{event.description}</p>
      </div>
       }
