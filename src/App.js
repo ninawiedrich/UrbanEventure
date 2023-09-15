@@ -7,6 +7,7 @@ import logo from './img/logo-UrbanEventure.png';
 import men from './img/logo-men.png';
 import { InfoAlert } from './components/Alert';
 import { ErrorAlert } from './components/Alert';
+import { WarningAlert } from './components/Alert';
 import './App.css';
 
 const App = () => {
@@ -16,9 +17,16 @@ const App = () => {
   const [currentCity, setCurrentCity] = useState("See all cities");
   const [infoAlert, setInfoAlert] = useState("")
 const [errorAlert, setErrorAlert] = useState("")
-  useEffect(() => {
-    fetchData();
-  }, [currentCity, currentNOE]);
+const [warningAlert, setWarningAlert] = useState("")
+
+useEffect(() => {
+  if (navigator.onLine) {
+    setWarningAlert('')
+  } else {
+    setWarningAlert('You are presently without an internet connection, viewing only previously accessed events. The event details might not be current.')
+  }
+  fetchData()
+}, [currentCity, currentNOE])
 
   const fetchData = async () => {
     const allEvents = await getEvents();
@@ -43,6 +51,7 @@ const [errorAlert, setErrorAlert] = useState("")
 <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert}/> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert}/> : null}
+        {warningAlert.length ? <WarningAlert text={warningAlert}/> : null}
       </div>
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} setInfoAlert={setInfoAlert}/>
       <NumberOfEvents setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert}/>
