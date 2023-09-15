@@ -42,7 +42,7 @@ const removeQuery = () => {
 const getToken = async (code) => {
   const encodeCode = encodeURIComponent(code);
   const response = await fetch(
-    "https://2dx56sozyi.execute-api.eu-central-1.amazonaws.com/dev/api/token" + "/" + encodeCode
+  'https://2dx56sozyi.execute-api.eu-central-1.amazonaws.com/dev/api/token' + '/' + encodeCode
   );
   const { access_token } = await response.json();
   access_token && localStorage.setItem("access_token", access_token);
@@ -75,12 +75,14 @@ export const getEvents = async () => {
     const url = 'https://2dx56sozyi.execute-api.eu-central-1.amazonaws.com/dev/api/get-events' + '/' + token;
     const response = await fetch(url);
     const result = await response.json();
-    console.log('API Result:', result);
     if (result) {
-      return result.events;
+    NProgress.done()
+    localStorage.setItem('lastEvents', JSON.stringify(result.events))
+    return result.events
     } else return null; 
   }
 };
+
 
 export const getAccessToken = async () => {
   const accessToken = localStorage.getItem('access_token');
