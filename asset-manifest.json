@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/UrbanEventure/static/css/main.270f31f4.css",
-    "main.js": "/UrbanEventure/static/js/main.b4fe8d7b.js",
+    "main.js": "/UrbanEventure/static/js/main.e030b39a.js",
     "static/js/787.0c2ca0b5.chunk.js": "/UrbanEventure/static/js/787.0c2ca0b5.chunk.js",
     "service-worker.js": "/UrbanEventure/service-worker.js",
     "static/media/logo-UrbanEventure.png": "/UrbanEventure/static/media/logo-UrbanEventure.3fbf708ad5d65b357cf3.png",
     "static/media/logo-men.png": "/UrbanEventure/static/media/logo-men.90ffb56a91c6ab614ec9.png",
     "index.html": "/UrbanEventure/index.html",
     "main.270f31f4.css.map": "/UrbanEventure/static/css/main.270f31f4.css.map",
-    "main.b4fe8d7b.js.map": "/UrbanEventure/static/js/main.b4fe8d7b.js.map",
+    "main.e030b39a.js.map": "/UrbanEventure/static/js/main.e030b39a.js.map",
     "787.0c2ca0b5.chunk.js.map": "/UrbanEventure/static/js/787.0c2ca0b5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.270f31f4.css",
-    "static/js/main.b4fe8d7b.js"
+    "static/js/main.e030b39a.js"
   ]
 }
