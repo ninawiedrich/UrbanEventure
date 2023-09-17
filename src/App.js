@@ -8,6 +8,7 @@ import men from './img/logo-men.png';
 import { InfoAlert } from './components/Alert';
 import { ErrorAlert } from './components/Alert';
 import { WarningAlert } from './components/Alert';
+import CityEventsChart from './components/CityEventsChart';
 import './App.css';
 
 const App = () => {
@@ -55,6 +56,7 @@ useEffect(() => {
       </div>
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} setInfoAlert={setInfoAlert}/>
       <NumberOfEvents setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert}/>
+      <CityEventsChart allLocations={allLocations} events={events} />
       <EventList events={events} />
     </div>
   );
