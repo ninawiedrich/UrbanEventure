@@ -131,7 +131,7 @@ body {
 }
 
 .city-input {
-  margin-top: 20px;
+
   padding: 10px;
   border: 1px solid #eaad65;
   border-radius: 5px;
@@ -245,4 +245,31 @@ body {
 
 .details-btn:hover {
   background-color: #e61d1d;
+}
+
+
+  .charts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 1% 0;
+  width: 99%;
+  height: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+    margin-bottom: 520px;
+  }
+
+  .charts-container > :first-child {
+    margin-top: 20px;
+    margin-bottom: 70px; /* Adjust the value as needed to create sufficient space */
+  }
+
+  .charts-container > :second-child {
+    margin-bottom: 150px; /* Adjust the value as needed to create sufficient space */
+  }
 }
