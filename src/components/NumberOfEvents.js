@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
 const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
-  const [numberOfEvents, setNumberOfEvents] = useState(32); // Set a default value of 32
+  const [numberOfEvents, setNumberOfEvents] = useState("32"); // Set a default value of 32
 
   const handleInputChanged = (event) => {
     const value = event.target.value;
     setNumberOfEvents(value);
+    setCurrentNOE(value);
 
     let infoText;
     if (isNaN(value) || value <= 0) {

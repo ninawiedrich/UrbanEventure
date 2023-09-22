@@ -9,13 +9,9 @@ import {
 } from 'recharts'
 
 const EventGenresChart = ({ events }) => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
   const genres = [
-    'React',
-    'JavaScript',
-    'Node',
-    'jQuery',
-    'Angular'
+    "React", "JavaScript", "Node", "jQuery", "Angular"
   ]
   const colors = [
     '#FFBE0B',
@@ -25,12 +21,12 @@ const EventGenresChart = ({ events }) => {
     '#3A86FF'
   ]
 
-   // get data only on event change
-   useEffect(() => {
+  useEffect(() => {
+    console.log('useEffect running with ${events}: ', `${events}`);
     setData(getData());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [`${events}`]);
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [events]);
+   
    // calculate number of genre events from data
   const getData = () => {
     const data = genres.map((genre) => {
@@ -40,10 +36,10 @@ const EventGenresChart = ({ events }) => {
       return {
         name: genre,
         value: genreEventsNumber,
-      }
-    })
-    return data
-  }
+      };
+    });
+    return data;
+  };
 
   // render customized pie segment labels
   const renderCustomizedLabel = ({ cx, cy, midAngle, outerRadius, percent, index }) => {
@@ -61,8 +57,8 @@ const EventGenresChart = ({ events }) => {
       >
         {`${genres[index]} ${(percent * 100).toFixed(0)}%`}
       </text>
-    ) : null
-  }
+    ) : null;
+  };
 
   
   return (
