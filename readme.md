@@ -131,5 +131,8 @@ Then the event details should be hidden again
 - Aiming for ≥ 90% test coverage
 - Performance monitoring via online tools
 
-## Advanced Deliverables
-[Additional feature placeholders here]
+## Project Website
+
+For more information, live demos, and usage examples, please visit the [UrbanEventure](https://ninawiedrich.github.io/UrbanEventure/) website.
+
+

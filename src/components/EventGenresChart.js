@@ -22,7 +22,6 @@ const EventGenresChart = ({ events }) => {
   ]
 
   useEffect(() => {
-    console.log('useEffect running with ${events}: ', `${events}`);
     setData(getData());
         // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [events]);

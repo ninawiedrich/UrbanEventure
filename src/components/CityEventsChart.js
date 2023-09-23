@@ -14,7 +14,6 @@ const CityEventsChart = ({ allLocations, events }) => {
 
    // get data only on event change
    useEffect(() => {
-    console.log('Events: ', events);
     setData(getData());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [events]);
